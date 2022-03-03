@@ -25,7 +25,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <EditText
-                android:id="@+id/NumbersTextView"
+                android:id="@+id/ValueBTV"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="68dp"
@@ -33,7 +33,7 @@
                 android:inputType="none"
                 android:text="@string/display"
                 android:textAlignment="textEnd"
-                android:textColor="@color/white"
+                android:textColor="#BC81AABD"
                 android:textSize="30sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -43,12 +43,12 @@
                 tools:ignore="LabelFor" />
 
             <TextView
-                android:id="@+id/Number2TextView"
+                android:id="@+id/ValueTTV"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:textAlignment="viewEnd"
-                android:textColor="@color/white"
+                android:textColor="#BC81AABD"
                 android:textSize="25sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
@@ -70,88 +70,88 @@
             app:layout_constraintVertical_bias="0.0">
 
             <Button
-                android:id="@+id/TwoButton"
+                android:id="@+id/TwoBut"
                 android:layout_width="88dp"
                 android:layout_height="88dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="4dp"
-                android:backgroundTint="#171717"
-                android:onClick="TwoButton"
+                android:backgroundTint="#292828"
+                android:onClick="TwoBut"
                 android:text="2"
                 android:textColor="@color/white"
                 android:textSize="15sp"
-                app:layout_constraintStart_toEndOf="@+id/OneButton"
-                app:layout_constraintTop_toBottomOf="@+id/FiveButton" />
+                app:layout_constraintStart_toEndOf="@+id/OneBut"
+                app:layout_constraintTop_toBottomOf="@+id/FiveBut" />
 
             <Button
-                android:id="@+id/OneButton"
+                android:id="@+id/OneBut"
                 android:layout_width="88dp"
                 android:layout_height="88dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="4dp"
-                android:backgroundTint="#171717"
-                android:onClick="OneButton"
+                android:backgroundTint="#292828"
+                android:onClick="OneBut"
                 android:text="1"
                 android:textColor="@color/white"
                 android:textSize="15sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/FourButton" />
+                app:layout_constraintTop_toBottomOf="@+id/FourBut" />
 
             <Button
-                android:id="@+id/CButton"
+                android:id="@+id/CBut"
                 android:layout_width="88dp"
                 android:layout_height="88dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="28dp"
-                android:backgroundTint="#171717"
-                android:onClick="CButton"
+                android:backgroundTint="#292828"
+                android:onClick="CBut"
                 android:text="C"
                 android:textColor="@color/white"
                 android:textSize="15sp"
-                app:layout_constraintStart_toEndOf="@+id/CEButton"
+                app:layout_constraintStart_toEndOf="@+id/CEBut"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <Button
-                android:id="@+id/NineButton"
+                android:id="@+id/NineBut"
                 android:layout_width="88dp"
                 android:layout_height="88dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="4dp"
-                android:backgroundTint="#171717"
-                android:onClick="NineButton"
+                android:backgroundTint="#292828"
+                android:onClick="NineBut"
                 android:text="9"
                 android:textColor="@color/white"
                 android:textSize="15sp"
-                app:layout_constraintStart_toEndOf="@+id/EightButton"
+                app:layout_constraintStart_toEndOf="@+id/EightBut"
                 app:layout_constraintTop_toBottomOf="@+id/NANButton" />
 
             <Button
-                android:id="@+id/ThreeButton"
+                android:id="@+id/ThreeBut"
                 android:layout_width="88dp"
                 android:layout_height="88dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="4dp"
-                android:backgroundTint="#171717"
-                android:onClick="ThreeButton"
+                android:backgroundTint="#292828"
+                android:onClick="ThreeBut"
                 android:text="3"
                 android:textColor="@color/white"
                 android:textSize="15sp"
-                app:layout_constraintStart_toEndOf="@+id/TwoButton"
-                app:layout_constraintTop_toBottomOf="@+id/SixButton" />
+                app:layout_constraintStart_toEndOf="@+id/TwoBut"
+                app:layout_constraintTop_toBottomOf="@+id/SixBut" />
 
             <Button
-                android:id="@+id/SixButton"
+                android:id="@+id/SixBut"
                 android:layout_width="88dp"
                 android:layout_height="88dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="4dp"
-                android:backgroundTint="#171717"
-                android:onClick="SixButton"
+                android:backgroundTint="#292828"
+                android:onClick="SixBut"
                 android:text="6"
                 android:textColor="@color/white"
                 android:textSize="15sp"
-                app:layout_constraintStart_toEndOf="@+id/FiveButton"
-                app:layout_constraintTop_toBottomOf="@+id/NineButton" />
+                app:layout_constraintStart_toEndOf="@+id/FiveBut"
+                app:layout_constraintTop_toBottomOf="@+id/NineBut" />
 
             <Button
                 android:id="@+id/PlusButton"
@@ -159,14 +159,14 @@
                 android:layout_height="88dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="4dp"
-                android:backgroundTint="#171717"
-                android:onClick="AddButton"
+                android:backgroundTint="#292828"
+                android:onClick="AddBut"
                 android:text="+"
                 android:textColor="@color/white"
                 android:textSize="15sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.074"
-                app:layout_constraintStart_toEndOf="@+id/ThreeButton"
+                app:layout_constraintStart_toEndOf="@+id/ThreeBut"
                 app:layout_constraintTop_toBottomOf="@+id/MinusButton" />
 
             <Button
@@ -175,13 +175,15 @@
                 android:layout_height="88dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="4dp"
-                android:backgroundTint="#171717"
-                android:onClick="exponentButton"
-                android:text="^"
+                android:backgroundTint="#292828"
+                android:fontFamily="sans-serif-medium"
+                android:onClick="ExpBut"
+                android:text="x²"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textColor="@color/white"
                 android:textSize="15sp"
                 app:layout_constraintStart_toEndOf="@+id/FractionButton"
-                app:layout_constraintTop_toBottomOf="@+id/CEButton" />
+                app:layout_constraintTop_toBottomOf="@+id/CEBut" />
 
             <Button
                 android:id="@+id/NANButton"
@@ -189,42 +191,57 @@
                 android:layout_height="88dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="4dp"
-                android:backgroundTint="#171717"
-                android:onClick="PlusorMinus"
-                android:text="±"
+                android:backgroundTint="#292828"
+                android:onClick="PorMBut"
+                android:text="²√x"
                 android:textColor="@color/white"
                 android:textSize="15sp"
                 app:layout_constraintStart_toEndOf="@+id/TPowerButton"
-                app:layout_constraintTop_toBottomOf="@+id/CButton" />
+                app:layout_constraintTop_toBottomOf="@+id/CBut" />
 
             <Button
-                android:id="@+id/EightButton"
+                android:id="@+id/NANButton2"
                 android:layout_width="88dp"
                 android:layout_height="88dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="4dp"
-                android:backgroundTint="#171717"
-                android:onClick="EightButton"
+                android:backgroundTint="#292828"
+                android:onClick="PorMBut"
+                android:text="±"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/OneBut" />
+
+            <Button
+                android:id="@+id/EightBut"
+                android:layout_width="88dp"
+                android:layout_height="88dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:backgroundTint="#292828"
+                android:onClick="EightBut"
                 android:text="8"
                 android:textColor="@color/white"
                 android:textSize="15sp"
-                app:layout_constraintStart_toEndOf="@+id/SevenButton"
+                app:layout_constraintStart_toEndOf="@+id/SevenBut"
                 app:layout_constraintTop_toBottomOf="@+id/TPowerButton" />
 
             <Button
-                android:id="@+id/MultiButton"
+                android:id="@+id/MulBut"
                 android:layout_width="88dp"
                 android:layout_height="88dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="4dp"
-                android:backgroundTint="#171717"
-                android:onClick="MultiButton"
+                android:backgroundTint="#292828"
+                android:onClick="MulBut"
                 android:text="X"
                 android:textColor="@color/white"
                 android:textSize="15sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.074"
-                app:layout_constraintStart_toEndOf="@+id/NineButton"
+                app:layout_constraintStart_toEndOf="@+id/NineBut"
                 app:layout_constraintTop_toBottomOf="@+id/DivideButton" />
 
             <Button
@@ -234,14 +251,14 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="28dp"
                 android:layout_marginEnd="10dp"
-                android:backgroundTint="#171717"
-                android:onClick="DeleteButton"
+                android:backgroundTint="#292828"
+                android:onClick="DelBut"
                 android:text="DEL"
                 android:textColor="@color/white"
                 android:textSize="15sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.117"
-                app:layout_constraintStart_toEndOf="@+id/CButton"
+                app:layout_constraintStart_toEndOf="@+id/CBut"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <Button
@@ -250,34 +267,37 @@
                 android:layout_height="88dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="4dp"
-                android:backgroundTint="#171717"
+                android:backgroundTint="#292828"
+                android:fontFamily="sans-serif-medium"
+                android:text="¹/x"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display4"
                 android:textColor="@color/white"
                 android:textSize="15sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/PercentButton" />
+                app:layout_constraintTop_toBottomOf="@+id/PercBut" />
 
             <Button
-                android:id="@+id/FiveButton"
+                android:id="@+id/FiveBut"
                 android:layout_width="88dp"
                 android:layout_height="88dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="4dp"
-                android:backgroundTint="#171717"
-                android:onClick="FiveButton"
+                android:backgroundTint="#292828"
+                android:onClick="FiveBut"
                 android:text="5"
                 android:textColor="@color/white"
                 android:textSize="15sp"
-                app:layout_constraintStart_toEndOf="@+id/FourButton"
-                app:layout_constraintTop_toBottomOf="@+id/EightButton" />
+                app:layout_constraintStart_toEndOf="@+id/FourBut"
+                app:layout_constraintTop_toBottomOf="@+id/EightBut" />
 
             <Button
-                android:id="@+id/PercentButton"
+                android:id="@+id/PercBut"
                 android:layout_width="88dp"
                 android:layout_height="88dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="28dp"
-                android:backgroundTint="#171717"
-                android:onClick="PercentButton"
+                android:backgroundTint="#292828"
+                android:onClick="PercBut"
                 android:text="%"
                 android:textColor="@color/white"
                 android:textSize="15sp"
@@ -285,42 +305,42 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <Button
-                android:id="@+id/FourButton"
+                android:id="@+id/FourBut"
                 android:layout_width="88dp"
                 android:layout_height="88dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="4dp"
-                android:backgroundTint="#171717"
-                android:onClick="FourButton"
+                android:backgroundTint="#292828"
+                android:onClick="FourBut"
                 android:text="4"
                 android:textColor="@color/white"
                 android:textSize="15sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/SevenButton" />
+                app:layout_constraintTop_toBottomOf="@+id/SevenBut" />
 
             <Button
-                android:id="@+id/ZeroButton"
+                android:id="@+id/ZeroBut"
                 android:layout_width="88dp"
                 android:layout_height="88dp"
-                android:layout_marginStart="104dp"
-                android:backgroundTint="#171717"
-                android:onClick="ZeroButton"
+                android:layout_marginStart="8dp"
+                android:backgroundTint="#292828"
+                android:onClick="ZeroBut"
                 android:text="0"
                 android:textColor="@color/white"
                 android:textSize="15sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/TwoButton"
-                app:layout_constraintVertical_bias="0.105" />
+                app:layout_constraintStart_toEndOf="@+id/NANButton2"
+                app:layout_constraintTop_toBottomOf="@+id/TwoBut"
+                app:layout_constraintVertical_bias="0.307" />
 
             <Button
-                android:id="@+id/SevenButton"
+                android:id="@+id/SevenBut"
                 android:layout_width="88dp"
                 android:layout_height="88dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="4dp"
-                android:backgroundTint="#171717"
-                android:onClick="SevenButton"
+                android:backgroundTint="#292828"
+                android:onClick="SevenBut"
                 android:text="7"
                 android:textColor="@color/white"
                 android:textSize="15sp"
@@ -328,33 +348,33 @@
                 app:layout_constraintTop_toBottomOf="@+id/FractionButton" />
 
             <Button
-                android:id="@+id/EqualButton"
+                android:id="@+id/EQBut"
                 android:layout_width="88dp"
                 android:layout_height="88dp"
                 android:layout_marginStart="4dp"
                 android:layout_marginTop="4dp"
-                android:backgroundTint="#171717"
-                android:onClick="equalButton"
+                android:backgroundTint="#292828"
+                android:onClick="EQBut"
                 android:text="="
                 android:textColor="@color/white"
                 android:textSize="15sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.193"
-                app:layout_constraintStart_toEndOf="@+id/DotButton"
+                app:layout_constraintStart_toEndOf="@+id/DotesBut"
                 app:layout_constraintTop_toBottomOf="@+id/PlusButton" />
 
             <Button
-                android:id="@+id/CEButton"
+                android:id="@+id/CEBut"
                 android:layout_width="88dp"
                 android:layout_height="88dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="28dp"
-                android:backgroundTint="#171717"
-                android:onClick="CEButton"
+                android:backgroundTint="#292828"
+                android:onClick="CEBut"
                 android:text="CE"
                 android:textColor="@color/white"
                 android:textSize="15sp"
-                app:layout_constraintStart_toEndOf="@+id/PercentButton"
+                app:layout_constraintStart_toEndOf="@+id/PercBut"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <Button
@@ -363,29 +383,29 @@
                 android:layout_height="88dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="4dp"
-                android:backgroundTint="#171717"
-                android:onClick="SubtractButton"
+                android:backgroundTint="#292828"
+                android:onClick="SubBut"
                 android:text="-"
                 android:textColor="@color/white"
                 android:textSize="15sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.074"
-                app:layout_constraintStart_toEndOf="@+id/SixButton"
-                app:layout_constraintTop_toBottomOf="@+id/MultiButton" />
+                app:layout_constraintStart_toEndOf="@+id/SixBut"
+                app:layout_constraintTop_toBottomOf="@+id/MulBut" />
 
             <Button
-                android:id="@+id/DotButton"
+                android:id="@+id/DotesBut"
                 android:layout_width="88dp"
                 android:layout_height="88dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="4dp"
-                android:backgroundTint="#171717"
-                android:onClick="DotButton"
+                android:backgroundTint="#292828"
+                android:onClick="DotesBut"
                 android:text="."
                 android:textColor="@color/white"
                 android:textSize="15sp"
-                app:layout_constraintStart_toEndOf="@+id/ZeroButton"
-                app:layout_constraintTop_toBottomOf="@+id/ThreeButton" />
+                app:layout_constraintStart_toEndOf="@+id/ZeroBut"
+                app:layout_constraintTop_toBottomOf="@+id/ThreeBut" />
 
             <Button
                 android:id="@+id/DivideButton"
@@ -393,8 +413,8 @@
                 android:layout_height="88dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="4dp"
-                android:backgroundTint="#171717"
-                android:onClick="DivisionButton"
+                android:backgroundTint="#292828"
+                android:onClick="DivBut"
                 android:text="/"
                 android:textColor="@color/white"
                 android:textSize="15sp"

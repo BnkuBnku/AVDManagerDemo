@@ -2,170 +2,169 @@ package com.example.avdmanagerdemo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import org.mariuszgromada.math.mxparser.Expression; //Using Math  for all complicated calculation.
+
 import android.os.Bundle;
 import android.text.SpannableStringBuilder;
+import android.widget.Toast;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import org.mariuszgromada.math.*;
-import org.mariuszgromada.math.mxparser.Expression;
-
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView NumbersTop;
-    private EditText Numbers;
-
-    private String SumNumbers;
+    private TextView ValueT;
+    private EditText ValueB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        NumbersTop = findViewById(R.id.Number2TextView);
-        Numbers = findViewById(R.id.NumbersTextView);
-        Numbers.setShowSoftInputOnFocus(false);
+        ValueT = findViewById(R.id.ValueTTV);
+        ValueB = findViewById(R.id.ValueBTV);
 
-        Numbers.setOnClickListener(new View.OnClickListener() {
+        ValueB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(getString(R.string.display).equals(Numbers.getText().toString())){
-                    Numbers.setText("");
+                if(getString(R.string.display).equals(ValueB.getText().toString())){
+                    ValueB.setText("");
+                    Toast.makeText(MainActivity.this, "Add" , Toast.LENGTH_LONG).show();
                 }
             }
         });
+
+        ValueB.setShowSoftInputOnFocus(false);
     }
 
-    private void UpString(String strToAdd){
-        String oldStr = Numbers.getText().toString();
-        int cursorP = Numbers.getSelectionStart();
-        String leftStr = oldStr.substring(0, cursorP);
-        String rightStr = oldStr.substring(cursorP);
-        if(getString(R.string.display).equals(Numbers.getText().toString())){
-            Numbers.setText(strToAdd);
-            Numbers.setSelection(cursorP + 1);
-        }
-        else{
-            Numbers.setText(String.format("%s%s%s", leftStr, strToAdd, rightStr));
-            Numbers.setSelection(cursorP + 1);
-        }
+    public void ZeroBut(View view){
+        Frosh("0");
     }
 
-    public void ZeroButton(View view){
-        UpString("0");
+    public void OneBut(View view){
+        Frosh("1");
     }
 
-    public void OneButton(View view){
-        UpString("1");
+    public void TwoBut(View view){
+        Frosh("2");
     }
 
-    public void TwoButton(View view){
-        UpString("2");
+    public void ThreeBut(View view){
+        Frosh("3");
     }
 
-    public void ThreeButton(View view){
-        UpString("3");
+    public void FourBut(View view){
+        Frosh("4");
     }
 
-    public void FourButton(View view){
-        UpString("4");
+    public void FiveBut(View view){
+        Frosh("5");
     }
 
-    public void FiveButton(View view){
-        UpString("5");
+    public void SixBut(View view){
+        Frosh("6");
     }
 
-    public void SixButton(View view){
-        UpString("6");
+    public void SevenBut(View view){
+        Frosh("7");
     }
 
-    public void SevenButton(View view){
-        UpString("7");
+    public void EightBut(View view){
+        Frosh("8");
     }
 
-    public void EightButton(View view){
-        UpString("8");
+    public void NineBut(View view){
+        Frosh("9");
     }
 
-    public void NineButton(View view){
-        UpString("9");
+    public void DivBut(View view){
+        Frosh("÷");
+        ValueT.setText(ValueB.getText().toString());
+        ValueB.setText("");
     }
 
-    public void DeleteButton(View view){
-        int cursorP = Numbers.getSelectionStart();
-        int textLine = Numbers.getText().length();
-
-        if(cursorP != 0 && textLine != 0){
-            SpannableStringBuilder selection = (SpannableStringBuilder) Numbers.getText();
-            selection.replace(cursorP - 1, cursorP, "");
-            Numbers.setText(selection);
-            Numbers.setSelection(cursorP - 1);
-        }
+    public void MulBut(View view){
+        Frosh("×");
+        ValueT.setText(ValueB.getText().toString());
+        ValueB.setText("");
     }
 
-    public void DivisionButton(View view){
-        UpString("÷");
-        NumbersTop.setText(Numbers.getText().toString());
-        Numbers.setText("");
+    public void SubBut(View view){
+        Frosh("-");
+        ValueT.setText(ValueB.getText().toString());
+        ValueB.setText("");
     }
 
-    public void MultiButton(View view){
-        UpString("×");
-        NumbersTop.setText(Numbers.getText().toString());
-        Numbers.setText("");
+    public void AddBut(View view){
+        Frosh("+");
+        ValueT.setText(ValueB.getText().toString());
+        ValueB.setText("");
     }
 
-    public void SubtractButton(View view){
-        UpString("-");
-        NumbersTop.setText(Numbers.getText().toString());
-        Numbers.setText("");
-    }
-
-    public void AddButton(View view){
-        UpString("+");
-        NumbersTop.setText(Numbers.getText().toString());
-        Numbers.setText("");
-    }
-
-    public void equalButton(View view){
-        String UE = NumbersTop.getText().toString() + Numbers.getText().toString();
-        NumbersTop.setText(NumbersTop.getText().toString() + Numbers.getText().toString() + " = "); //Final Calculation Display
+    public void EQBut(View view){
+        String UE = ValueT.getText().toString() + ValueB.getText().toString();
+        ValueT.setText(ValueT.getText().toString() + ValueB.getText().toString() + " = "); //Final Calculation Display
         UE = UE.replaceAll("÷", "/");
         UE = UE.replaceAll("×", "*");
 
         Expression exp = new Expression(UE);
         String results = String.valueOf(exp.calculate());
 
-        Numbers.setText(results);
-        Numbers.setSelection(results.length());
+        ValueB.setText(results);
+        ValueB.setSelection(results.length());
     }
 
-    public void exponentButton (View view){
-        UpString("^");
-        NumbersTop.setText(Numbers.getText().toString());
-        Numbers.setText("");
+    public void ExpBut (View view){
+        Frosh("^");
+        ValueT.setText(ValueB.getText().toString());
+        ValueB.setText("");
     }
 
-    public void CButton(View view){
-        Numbers.setText("");
+    public void CBut(View view){
+        ValueB.setText("");
     }
 
-    public void CEButton(View view){
-        NumbersTop.setText("");
-        Numbers.setText("");
+    public void CEBut(View view){
+        ValueT.setText("");
+        ValueB.setText("");
     }
 
-    public void PercentButton(View view){
-        UpString("%");
-        NumbersTop.setText(Numbers.getText().toString());
-        Numbers.setText("");
+    public void PercBut(View view){
+        Frosh("%");
+        ValueT.setText(ValueB.getText().toString());
+        ValueB.setText("");
+    }
+    public void DotesBut(View view){
+        Frosh(".");
     }
 
-    public void DotButton(View view){
-        UpString(".");
+    public void PorMBut(View view){ Frosh("-");
     }
 
-    public void PlusorMinus(View view){ UpString("-");
+    public void DelBut(View view){
+        int cursorP = ValueB.getSelectionStart();
+        int textLine = ValueB.getText().length();
+
+        if(cursorP != 0 && textLine != 0){
+            SpannableStringBuilder selection = (SpannableStringBuilder) ValueB.getText();
+            selection.replace(cursorP - 1, cursorP, "");
+            ValueB.setText(selection);
+            ValueB.setSelection(cursorP - 1);
+        }
+    }
+
+    private void Frosh(String strToAdd){
+        String oldStr = ValueB.getText().toString();
+        int cursorP = ValueB.getSelectionStart();
+        String leftStr = oldStr.substring(0, cursorP);
+        String rightStr = oldStr.substring(cursorP);
+        if(getString(R.string.display).equals(ValueB.getText().toString())){
+            ValueB.setText(strToAdd);
+            ValueB.setSelection(cursorP + 1);
+        }
+        else{
+            ValueB.setText(String.format("%s%s%s", leftStr, strToAdd, rightStr));
+            ValueB.setSelection(cursorP + 1);
+        }
     }
 }
